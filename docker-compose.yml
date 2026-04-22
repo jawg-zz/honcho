@@ -24,7 +24,7 @@ services:
     restart: unless-stopped
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.honcho.rule=Host(`honcho.${DOMAIN}`)"
+      - "traefik.http.routers.honcho.rule=Host(`honcho.spidmax.win`)"
       - "traefik.http.routers.honcho.entrypoints=websecure"
       - "traefik.http.routers.honcho.tls.certresolver=letsencrypt"
       - "traefik.http.services.honcho.loadbalancer.server.port=8000"
