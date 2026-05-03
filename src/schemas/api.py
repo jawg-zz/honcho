@@ -322,7 +322,7 @@ class SessionBase(BaseModel):
 class SessionCreate(SessionBase):
     name: Annotated[
         str,
-        Field(alias="id", min_length=1, max_length=100, pattern=RESOURCE_NAME_PATTERN),
+        Field(alias="id", min_length=1, max_length=500, pattern=RESOURCE_NAME_PATTERN),
     ]
     metadata: _SanitizedMetadata | None = None
     peer_names: dict[str, SessionPeerConfig] | None = Field(default=None, alias="peers")
